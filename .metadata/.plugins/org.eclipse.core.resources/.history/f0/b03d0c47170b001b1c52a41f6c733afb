@@ -1,0 +1,73 @@
+package report4;
+
+import java.util.Scanner;
+
+public class Person {
+	String name;
+	String birth;
+	String state;
+	
+	public Person()
+	{
+		name = "";
+		birth = "";
+		state = "";
+	}
+	public void create(String n)
+	{
+		name = n;
+		System.out.println("객체가 생성되었습니다.");
+	}
+	public void create(String n, String b)
+	{
+		name = n;
+		birth = b;
+	}
+	public void create(String n, String b, String s)
+	{
+		name = n;
+		birth = b;
+		state = s;
+	}
+	
+	Scanner scan = new Scanner(System.in);
+	public String nameIn()
+	{
+		System.out.print("입력1(이름) = ");
+		String n;
+		n = scan.nextLine();
+		return n;
+	}
+	public String birthIn()
+	{
+		System.out.print("입력2(생년월일) = ");
+		String b;
+		b = scan.nextLine();
+		return b;
+	}
+	public String stateIn()
+	{
+		System.out.print("입력3(출생지) = ");
+		String s;
+		s = scan.nextLine();
+		return s;
+	}
+	
+	public void printResult1() {
+		System.out.println("객체정보");
+		System.out.println("1. 이름: " + name);
+	}
+	
+	public void printResult2() {
+		System.out.println("객체정보");
+		System.out.println("1. 이름: " + name);
+		System.out.println("2. 생년월일: " + birth);
+	}
+	
+	public void printResult3() {
+		System.out.println("객체정보");
+		System.out.println("1. 이름: " + name);
+		System.out.println("2. 생년월일: " + birth);
+		System.out.print("3. 출생지: " + state);
+	}
+}

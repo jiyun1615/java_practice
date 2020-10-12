@@ -1,0 +1,33 @@
+package report4;
+import java.util.Scanner;
+
+public class report4{
+	public void main(String args[])
+	{
+		System.out.print("입력 항목은 몇 개 입니까? ");
+		int num = scan.nextInt();
+		String n1;
+		String b1;
+		String s1;
+		switch (num) {
+		case 1:
+			n1 = nameIn();
+			Person obj = new Person(n1);
+			break;
+		case 2:
+			n1 = nameIn();
+			b1 = birthIn();
+			Person obj1 = new Person(n1, b1);
+			break;
+		case 3:
+			n1 = nameIn();
+			b1 = birthIn();
+			s1 = stateIn();
+			Person obj2 = new Person(n1, b1, s1);
+			break;
+		default:
+			System.out.print("Error");
+			break;
+		}
+	}
+}

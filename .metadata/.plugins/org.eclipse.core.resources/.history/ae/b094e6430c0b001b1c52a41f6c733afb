@@ -1,0 +1,51 @@
+package report4;
+
+import java.util.Scanner;
+
+public class Person{
+	String name;
+	String birth;
+	String state;
+	
+	public Person()
+	{
+		
+	}
+	public Person(String n)
+	{
+		name = n;
+	}
+	public Person(String n, String b)
+	{
+		name = n;
+		birth = b;
+	}
+	public Person(String n, String b, String s)
+	{
+		name = n;
+		birth = b;
+		state = s;
+	}
+	Scanner scan = new Scanner(System.in);
+	String nameIn()
+	{
+		System.out.print("입력1(이름) = ");
+		String n;
+		n = scan.nextLine();
+		return n;
+	}
+	String birthIn()
+	{
+		System.out.print("입력2(생년월일) = ");
+		String b;
+		b = scan.nextLine();
+		return b;
+	}
+	String stateIn()
+	{
+		System.out.print("입력3(출생지) = ");
+		String s;
+		s = scan.nextLine();
+		return s;
+	}
+}

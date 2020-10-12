@@ -1,0 +1,27 @@
+package report4;
+
+public class Person{
+	private String name;
+	private String birth;
+	private String state;
+	
+	public Person()
+	{
+		
+	}
+	public Person(String n)
+	{
+		name = n;
+	}
+	public Person(String n, String b)
+	{
+		name = n;
+		birth = b;
+	}
+	public Person(String n, String b, String s)
+	{
+		name = n;
+		birth = b;
+		state = s;
+	}
+}
