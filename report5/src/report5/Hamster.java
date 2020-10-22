@@ -6,8 +6,9 @@ public class Hamster extends Animal implements Happy {
 		name = "³È³È";
 		age = "3»ì";
 	}
-	String introduce() {
-		return ("±Í¿©¿î ÇÜ½ºÅÍ " + name + "!");
+	void introduce() {
+		System.out.println("Á¾: "+ species + " ÀÌ¸§: " + name + " ³ªÀÌ : " + age);
+		System.out.println("±Í¿©¿î ÇÜ½ºÅÍ " + name + "!");
 	}
 	public String play() {
 		return ("¹ÙÄû±¼¸®±â¸¦ ÁÁ¾ÆÇØ¿ä.");
