@@ -7,7 +7,7 @@ public class Hamster extends Animal implements Happy {
 		age = "3살";
 	}
 	void introduce() {
-		System.out.println("종: "+ species + " 이름: " + name + " 나이 : " + age);
+		System.out.println("종: "+ species + "  이름: " + name + "  나이 : " + age);
 		System.out.println("귀여운 햄스터 " + name + "!");
 	}
 	public String play() {
