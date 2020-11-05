@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.String"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="javax.swing.JFrame"/>
-<fullyQualifiedTypeName name="javax.swing.JPanel"/>
-<fullyQualifiedTypeName name="a_package.Test1"/>
-</qualifiedTypeNameHistroy>
