@@ -7,5 +7,5 @@ public class Test2 {
 		Test1 ss = new Test1();
 		System.out.println(ss.sum(10, 20));
 	}
-
+	
 }
