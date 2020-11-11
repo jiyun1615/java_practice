@@ -1,15 +1,14 @@
-package report6;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.util.Scanner;
 import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
+import java.io.IOException;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.BufferedInputStream;
 import java.util.ArrayList;
-import java.util.Scanner;
 
-public class report6 {
-	public static void main(String args[]) throws IOException, ClassNotFoundException{
+public class report6_1 {
+	public static void main(String args[]) throws IOException{
 		FileOutputStream fos = null;
 		ObjectOutputStream oos = null;
 		
@@ -41,37 +40,22 @@ public class report6 {
 				System.out.println("File not exist.");
 			}
 			
-			FileInputStream fis = null;
-			
-			fis = new FileInputStream("friends.txt");
-			ObjectInputStream ois = new ObjectInputStream(fis);
-			int result = ois.readInt();
-			Friends[] friends = new Friends[result];
-			for(int i = 0; i<result; ++i)
-			{
-				friends[i] = (Friends) ois.readObject();
-			}
-			
-			
-			
-			/*	
-			ArrayList <Friends> result = new ArrayList<Friends>();
 			try {
-				for(;;) {
-					result.add((Friends)ois.readObject());
-				}
-			} catch (EOFException e) {
-				//end of steam
-			}
-			
-			for(int i =0; i<result.size(); i++)
-			{
-				System.out.println(result.get(i));
-			}
-				*/
-			//System.out.println((Friends)ois.readObject());
+				FileInputStream fis = new FileInputStream("friends.txt");
+				BufferedInputStream bis = new BufferedInputStream(fis);
+				ObjectInputStream ois = new ObjectInputStream(bis);
 				
-			
+				ArrayList list = (ArrayList) ois.readObject();
+				
+				for(int i=0; i<list.size(); i++)
+				{
+					System.out.println(list.toString());
+				}
+				
+			}
+			catch(Exception e) {
+				System.out.println("File not exist.");
+			}
 			
 			System.out.print("Would you like to add new friend?(y/n)");
 			s = stdin.next();
